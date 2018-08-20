@@ -69,5 +69,4 @@ class UpdateBookView(UpdateView):
         return super(UpdateBookView, self).form_valid(form)
 
     def form_invalid(self, form):
-        print form.__dict__
         return self.render_to_response(self.get_context_data(form=form))

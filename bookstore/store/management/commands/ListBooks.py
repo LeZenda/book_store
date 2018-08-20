@@ -40,7 +40,5 @@ class Command(BaseCommand):
         else:
             books = Book.objects.all()[:amount]
 
-        print order, amount
-
         pprint([book.__dict__ for book in books])
 

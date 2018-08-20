@@ -1,2 +1,2 @@
 # book_store
-django test projest
+django test project

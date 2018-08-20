@@ -1,0 +1,57 @@
+[
+{
+    "model": "store.book",
+    "pk": 1,
+    "fields": {
+        "title": "The Clipper Ship Era",
+        "author": "Arthur Hamilton Clark",
+        "ISBN": "9781539419228",
+        "price": 2995,
+        "publish_date": "2018-08-18"
+    }
+},
+{
+    "model": "store.book",
+    "pk": 2,
+    "fields": {
+        "title": "The Arthur H. Clark Company: An Americana Century",
+        "author": "Robert A. Clark - Patrick J. Brunet",
+        "ISBN": "9780870623196",
+        "price": 7500,
+        "publish_date": "2018-02-18"
+    }
+},
+{
+    "model": "store.book",
+    "pk": 3,
+    "fields": {
+        "title": "Defense Mechanisms in the Counseling Process",
+        "author": "Arthur J. Clark",
+        "ISBN": "9780761906612",
+        "price": 9431,
+        "publish_date": "2018-08-18"
+    }
+},
+{
+    "model": "store.book",
+    "pk": 4,
+    "fields": {
+        "title": "Navigating the Missouri: Steamboating on Nature's Highway",
+        "author": "William E. Lass",
+        "ISBN": "9780870623554",
+        "price": 4500,
+        "publish_date": "2017-08-18"
+    }
+},
+{
+    "model": "store.book",
+    "pk": 5,
+    "fields": {
+        "title": "Diary of William Hedges",
+        "author": "William L. Hedges",
+        "ISBN": "9780870623295",
+        "price": 12348,
+        "publish_date": "2011-08-18"
+    }
+}
+]

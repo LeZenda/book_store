@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+
+{% block title %}Book List{% endblock %}
+
+{% block content %}
+
+{% if user.is_superuser or user.is_staff %}
+<input type="button" class="btn btn-info" value="Admin" onclick="location.href = '{% url "admin:store_book_changelist" %}';">
+{% endif %}
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">Author</th>
+      <th scope="col">ISBN</th>
+      <th scope="col">price</th>
+      {% if perms.store.change_book %}
+      <th scope="col"></th>
+      {% endif %}
+    </tr>
+  </thead>
+  <tbody>
+
+    {% for book in book_list %}
+
+        <tr>
+          <th scope="row">{{ book.title }}</th>
+          <td>{{ book.author }}</td>
+          <td>{{ book.ISBN }}</td>
+          <td>{{ book.formatted_price }}</td>
+          {% if perms.store.change_book %}
+          <td><a href="{% url 'book_update' id=book.id %}">change</a></td>
+          {% endif %}
+        </tr>
+
+    {% endfor %}
+
+  </tbody>
+</table>
+
+{% if perms.store.create_book %}
+<a href="{% url 'book_create'%}">Add new book</a>
+{% endif %}
+
+{% endblock %}

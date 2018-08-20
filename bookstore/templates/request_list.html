@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block title %}Book List{% endblock %}
+
+{% block content %}
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">Time</th>
+      <th scope="col">Path</th>
+      <th scope="col">Method</th>
+      <th scope="col">User</th>
+    </tr>
+  </thead>
+  <tbody>
+
+    {% for request_stat in request_list %}
+
+        <tr>
+          <th scope="row">{{ request_stat.time }}</th>
+          <td>{{ request_stat.path }}</td>
+          <td>{{ request_stat.method }}</td>
+          <td>{{ request_stat.user }}</td>
+        </tr>
+
+    {% endfor %}
+
+  </tbody>
+</table>
+
+{% endblock %}
